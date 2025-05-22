@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basket Clues</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    h1.has-text-color {
+      text-align: center;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .service {
+      margin: 10px;
+      padding: 20px;
+      background-color: #e0ecff;
+      border-left: 5px solid #004080;
+      border-radius: 4px;
+      flex: 1 1 200px;
+    }
+
+    .testimonial {
+      background-color: #ffffff;
+      margin: 10px 0;
+      padding: 20px;
+      border-left: 4px solid #004080;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    form {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+.logo {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+header {
+  background-color: #004080;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+    button {
+      background-color: #004080;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0059b3;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+.hero-section {
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+  padding: 80px 20px 60px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3em;
+  color: #003366;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  color: #444;
+  line-height: 1.6;
+}
+
+.hero-image-wrapper {
+  flex: 1 1 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-whatsapp img {
+      width: 32px;
+      height: 32px;
+    }
+.services-section {
+  padding: 60px 20px;
+  background-color: #f9f9fb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.about-section {
+  background-color: #f0f8ff;
+  padding: 80px 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #003366;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+.contact-details {
+  background-color: #f5f7fa;
+  padding: 40px 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+  color: #004080;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.contact-details li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.contact-details a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+  color: #004080;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #0059b3;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-title {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #003366;
+  font-weight: 600;
+}
+
+.service-description {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #444;
+  line-height: 1.5em;
+}
+.floating-email {
+  position: fixed;
+  bottom: 15px;
+  left: 20px; /* changed from right: 20px */
+  background-color: #004080;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.floating-email:hover {
+  background-color: #0066cc;
+}
+.email-icon {
+  width: 32px;
+  height: 32px;
+  filter: invert(1);
+}
+.six-star-rating {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.star {
+  color: gold;
+  font-size: 24px;
+  padding: 0 2px;
+  transition: transform 0.2s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+    .sip-calculator {
+      position: fixed;
+      bottom: 90px;
+      left: 20px;
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+   <img src="Basketclues-Logo-03-3.png" alt="Basket Clues Logo" class="logo">
+    <h1>Basket Clues</h1>
+    <p>LIC, Mutual Fund, Health, NPS</p>
+    <p>Foundation of Trust & Honesty – 7+ Years Serving Clients</p>
+  </header>
+  <section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1 class="hero-title">The right investment tailored for you</h1>
+      <p class="hero-subtitle">
+        At Basket Clues Financial Services, we understand your goals and guide you to financial freedom with personalized plans.
+      </p>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="Finance.png" alt="Investment Hero" class="hero-image">
+    </div>
+  </div>
+</section>
+  <section class="services-section">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="Mutualfunds.jpeg" alt="Mutual Funds" class="service-image">
+        <h3 class="service-title">Mutual Funds</h3>
+        <p class="service-description">
+          Choose the right fund based on your needs and grow your wealth to achieve your goals through investment baskets
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="Health-Insurance.webp" alt="Health Insurance" class="service-image">
+        <h3 class="service-title">Health Insurance</h3>
+        <p class="service-description">
+          Secure yourself and your family with our health insurance plans tailored to your needs
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="life-ins.png" alt="Life Insurance" class="service-image">
+        <h3 class="service-title">Life Insurance</h3>
+        <p class="service-description">
+          Secure the future of your loved ones with the right life insurance policy
+        </p>
+      </div>
+      <div class="service-card">
+        <img src="NPS (1).png" alt="NPS" class="service-image">
+        <h3 class="service-title">NPS</h3>
+        <p class="service-description">
+          Plan your retirement in a disciplined manner by investing in NPS
+        </p>
+  </div>
+</section>
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Our Company</h2>
+      <p>
+        Investment choices have to be personalized. Period. In the world of speaking to unknown faces, we specialize in one-to-one communication. Choice of investments has to be personalized & that is our motto. To ensure that your investment baskets are well entrenched & fit your needs, we curate products out of a universe of offerings and give you the best baskets to invest. We come with the background of having spent 15+ years in the field of financial services & ventured to set up this as part of our effort to help every investor choose the right product to fulfill their needs.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="d.png" alt="Basket Clues Team">
+    </div>
+  </div>
+</section>
+
+  <section>
+    <h2>Testimonials</h2>
+    <div class="testimonial">"Excellent guidance! Helped me choose the perfect LIC policy." – Ramesh K.</div>
+    <div class="testimonial">"Great team! Saved me a lot through mutual funds." – Priya D.</div>
+    <div class="testimonial">"Clear, practical advice with a human touch. Highly recommended." – Sandeep M.</div>
+    <div class="testimonial">"Their knowledge and service were outstanding throughout my investment journey." – Anjali R.</div>
+  </section>
+  <section class="blog-section">
+  <h2>Latest Blog Posts</h2>
+  <div class="blog-post">
+
+    <h3>Why Corporate Health Insurance Won’t Suffice</h3>
+<p>Many employees rely solely on corporate health insurance, thinking it's sufficient. However, there are limitations to consider...</p>
+<div class="six-star-rating">
+  <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+  <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+</div>
+<a href="http://basketclues.in/why-corporate-health-insurance-wont-suffice/" class="read-more">Read More</a>
+
+  </div>
+  <!-- Add more blog posts here -->
+</section>
+
+  <section>
+
+  <section class="contact-details">
+  <h2>Contact Information</h2>
+  <ul>
+    <li><strong>Registered Office:</strong> Chennai</li>
+    <li><strong>Phone:</strong> <a href="tel:9840556010">98405 56010</a>, <a href="tel:7845750120">78457 50120</a></li>
+    <li><strong>Email:</strong> <a href="mailto:info@basketclues.in">info@basketclues.in</a></li>
+    <li><strong>AMFI Registration No:</strong> 152800</li>
+  </ul>
+  <div class="social-media">
+    <a href="https://www.linkedin.com/company/Basket-Clues" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/basketclues" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/basketclues" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com/BasketClues" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Floating Email Button -->
+<a href="mailto:info@basketclues.in?subject=Inquiry%20from%20Website&body=Hello%20Team%20Basket%20Clues,%0A%0AI%20would%20like%20to%20know%20more%20about%20your%20services.%20Please%20get%20in%20touch%20with%20me.%0A%0ARegards,"
+   class="floating-email" title="Email Us">
+  <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" class="email-icon">
+</a>
+
+  <!--
+  <!-=- SIP Calculator -=->
+  <section>
+    <h2>SIP Calculator</h2>
+    <div class="sip-calculator">
+      <label>Monthly Investment: ₹<input type="number" id="monthly"></label><br>
+      <label>Expected Return (%): <input type="number" id="rate"></label><br>
+      <label>Time Period (Years): <input type="number" id="time"></label><br>
+      <button onclick="calculateSIP()">Calculate</button>
+      <p id="sip-result"></p>
+    </div>
+  </section>-->
+
+  <!-- Floating WhatsApp -->
+  <a class="floating-whatsapp" href="https://wa.me/919840556010" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+  </a>
+
+  <script>
+    function calculateSIP() {
+      const P = parseFloat(document.getElementById("monthly").value);
+      const r = parseFloat(document.getElementById("rate").value) / 100 / 12;
+      const n = parseFloat(document.getElementById("time").value) * 12;
+      const futureValue = P * (((Math.pow(1 + r, n)) - 1) / r) * (1 + r);
+      document.getElementById("sip-result").innerText = `Estimated Future Value: ₹${futureValue.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
